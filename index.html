@@ -14,37 +14,63 @@
         <link rel="stylesheet" type="text/css" href="./css/base.css">
     </head>
     <body>
+        <div class="alert">
+            Error while loading link: <strong>No internet connection</strong>.
+        </div>
+
+        <!--
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        -->
+
         <header>
-            <a id="logo" href="#" title="ksmb.com"></a>
+            <a id="logo" href="http://ksmb.com" title="ksmb.com"></a>
 
             <div id="header-left">
-                <nav id="menu" class="nav-item left">
-                    <i class="fa fa-bars"></i>
-                    <span class="menu-text">Menu</span>
-                </nav>
+                <a href="#">
+                    <nav id="menu" class="nav-item left">
+                        <i class="fa fa-bars"></i>
+                        <span class="menu-text">Menu</span>
+                    </nav>
+                </a>
 
-                <div id="weather" class="nav-item left">
-                    <span class="weather-icon"></span>
-                    <span class="menu-text">Set Weather</span>
-                    <i class="fa fa-chevron-down"></i>
-                </div>
+                <a href="#">
+                    <div id="weather" class="nav-item left">
+                        <span class="weather-icon"></span>
+                        <span class="menu-text">Set Weather</span>
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                </a>
             </div>
 
             <div id="header-right">
-                <div id="search" class="nav-item right icon">
-                    <i class="fa fa-search"></i><br>
-                    <span class="subtext">Search</span>
-                </div>
+                <a href="#">
+                    <div id="search" class="nav-item right icon">
+                        <i class="fa fa-search"></i><br>
+                        <span class="subtext">Search</span>
+                    </div>
+                </a>
 
-                <div id="sign-in" class="nav-item right icon">
-                    <i class="fa fa-user"></i><br>
-                    <span class="subtext">Sign In</span>
-                </div>
+                <a href="http://ksmb.com/sign-in">
+                    <div id="sign-in" class="nav-item right icon">
+                        <i class="fa fa-user"></i><br>
+                        <span class="subtext">Sign In</span>
+                    </div>
+                </a>
 
-                <div id="subscribe" class="nav-item right">
-                    <span class="menu-text">Subscribe</span>
-                    <i class="fa fa-chevron-down"></i>
-                </div>
+                <a href="http://ksmb.com/search">
+                    <div id="subscribe" class="nav-item right">
+                        <span class="menu-text">Subscribe</span>
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                </a>
             </div>
         </header>
 
@@ -61,8 +87,8 @@
                 <div id="content">
                     <div id="byline">
                         <img src="./assets/author.jpg" alt="Tim Evans (tim@ksmb.com)" id="author">
-                        By <a href="#">Tim Evans &mdash; tim@ksmb.com</a><br>
-                        <a href="#">Follow on Twitter</a><br>
+                        By <a href="mailto:tim@ksmb.com">Tim Evans &mdash; tim@ksmb.com</a><br>
+                        <a href="http://twitter.com/time_van">Follow on Twitter</a><br>
                         on February 05, 2015 at 8:29 PM
                     </div>
 
@@ -101,6 +127,12 @@
                         <p>
                             Keep up to date with the latest news in our area by following KSMB's Facebook page.
                         </p>
+
+                        <!--
+                        <div class="fb-share-button" data-layout="button_count"></div>
+                        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                        <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+                        -->
                     </div>
 
                     <div id="related">
@@ -111,15 +143,19 @@
                         <div class="related-container">
                             <div class="related-column left">
                                 <div>
-                                    <img src="./assets/spacex.png">
-                                    <a href="#">SpaceX launch postponed for unspecified reason</a>
+                                    <a href="http://ksmb.com/2015/8273/spacex-launch-postponed-for-unspecified-reasons">
+                                        <img src="./assets/spacex.png">
+                                    </a>
+                                    <a href="http://ksmb.com/2015/8273/spacex-launch-postponed-for-unspecified-reasons">SpaceX launch postponed for unspecified reason</a>
                                 </div>
                             </div>
 
                             <div class="related-column right">
                                 <div>
-                                    <img src="./assets/depression.png">
-                                    <a href="#">Depression linked to reading internet comments, new study suggests</a>
+                                    <a href="http://ksmb.com/2015/2619/depression-linked-to-reading-internet-comments">
+                                        <img src="./assets/depression.png">
+                                    </a>
+                                    <a href="http://ksmb.com/2015/2619/depression-linked-to-reading-internet-comments">Depression linked to reading internet comments, new study suggests</a>
                                 </div>
                             </div>
 
@@ -133,19 +169,21 @@
                         <div class="headline">Local Desert Singles</div>
 
                         <div class="panel-image">
-                            <img class="ad-image" src="./assets/singles.jpg">
+                            <a href="http://localdesertsingles.com/2817230/thomas-lee">
+                                <img class="ad-image" src="./assets/singles.jpg">
+                            </a>
                         </div>
 
                         <div class="panel-content">
                             <p class="name">
-                                Thomas Lee, 27, Santa Fe <span class="online">ONLINE!</span>
+                                <a href="http://localdesertsingles.com/2817230/thomas-lee">Thomas Lee</a>, 27, Santa Fe <span class="online">ONLINE!</span>
                             </p>
 
                             <p>
                                 "I like long walks on the beach and rocket launchers. Preferably at the same time."
                             </p>
 
-                            <a target="_blank" href="./ZGVsaWNpb3VzIG51dHJpdGlvdXMgTWFsaWNpb3VzLU8ncyE=.html">Meet more like Suq! Click here! <i class="fa fa-angle-double-right"></i></a>
+                            <a target="_blank" href="http://localdesertsingles.com/">Meet more like Thomas! Click here! <i class="fa fa-angle-double-right"></i></a>
                         </div>
                     </div>
 
@@ -153,19 +191,40 @@
                         <div class="headline">Free Classifieds</div>
 
                         <div class="panel-image">
-                            <img src="./assets/classifieds.jpg">
+                            <a href="http://ksmb.com/classifieds/null;;">
+                                <span class="label">
+                                    null - null
+                                </span>
+                                <img src="./assets/classifieds.jpg">
+                            </a>
                         </div>
 
                         <div class="panel-image">
-                            <img src="./assets/radio.jpg">
+                            <!-- Get away from there, Freeman! I'm expecting an important message -->
+                            <!-- <a href="http://ksmb.com/classifieds/92835/ranger-rci-6300f25\/cb"> -->
+                                <span class="label">
+                                    $150 - ranger rci-6300f25 ham/cb
+                                </span>
+                                <img src="./assets/radio.jpg">
+                            <!-- </a> -->
                         </div>
 
                         <div class="panel-image">
-                            <img src="./assets/piano.jpg">
+                            <a href="http://ksmb.com/classifieds/273642/baldwin-acrosonic-upright-piano-and-bench">
+                                <span class="label">
+                                    $250 - Baldwin Acrosonic Upright Piano and Bench
+                                </span>
+                                <img src="./assets/piano.jpg">
+                            </a>
                         </div>
 
                         <div class="panel-image">
-                            <img src="./assets/crowbar.jpg">
+                            <a href="http://ksmb.com/classifieds/742618/PRY-BAR-\/-CROW-BAR-HEAVY-DUTY">
+                                <span class="label">
+                                    $20 - PRY BAR / CROW BAR HEAVY DUTY ~ NEW
+                                </span>
+                                <img src="./assets/crowbar.jpg">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -187,6 +246,18 @@
         <div id="footer"></div>
 
         <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-        <script type="text/javascript" src="./Q29tZXMuLi4gYW5vdGhlci4uLg=="></script>
+        <script>$('a').on('click', function (e) { e.preventDefault(); });</script>
+        <script src="./js/jquery.ba-throttle-debounce.js"></script>
+        <!--
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script type="text/javascript">
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/platform.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+        -->
+        <script type="text/javascript" src="./js/Q29tZXMuLi4gYW5vdGhlci4uLg==.js"></script>
     </body>
 </html>

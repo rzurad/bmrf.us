@@ -66,9 +66,31 @@
         $radio.attr('src', isOn ? './assets/Rm9yZ2V0IGFib3V0IEZyZWVtYW4u.png' : './assets/radio.jpg');
     }
 
+    function hideError() {
+        $('.alert').removeClass('alert-visible');
+    }
+
+    var debounced = $.debounce(3000, false, hideError);
+
+    function showError() {
+        $('.alert').addClass('alert-visible');
+        debounced();
+    }
+
     $radio.on('click', function (e) {
         if (e.offsetX >= 158 &&e.offsetX <= 168 && e.offsetY >=75 && e.offsetY <= 83) {
             toggleRadio();
+        }
+    });
+
+    $('a').on('click', function (e) {
+        var commentClick = $(e.target).is('#comment-counter') || 
+                           $(e.target).parent('#comment-counter').length;
+
+        if (commentClick) {
+            window.location = '#comments';
+        } else {
+            showError();
         }
     });
 }.call(this));

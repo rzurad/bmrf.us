@@ -94,8 +94,8 @@
         }
     });
 
-    $('#footer').on('click', function (e) {
-        if (e.offsetX >= 85 && e.offsetX <= 154 && e.offsetY >= 127 && e.offsetY <= 141) {
+    $('#footer img').on('click', function (e) {
+        if (e.offsetX >= 58 && e.offsetX <= 124 && e.offsetY >= 126 && e.offsetY <= 141) {
             window.open('http://steampowered.com');
         }
     });

@@ -78,7 +78,7 @@
     }
 
     $radio.on('click', function (e) {
-        if (e.offsetX >= 158 &&e.offsetX <= 168 && e.offsetY >=75 && e.offsetY <= 83) {
+        if (e.offsetX >= 158 && e.offsetX <= 168 && e.offsetY >=75 && e.offsetY <= 83) {
             toggleRadio();
         }
     });
@@ -91,6 +91,12 @@
             window.location = '#comments';
         } else {
             showError();
+        }
+    });
+
+    $('#footer').on('click', function (e) {
+        if (e.offsetX >= 85 && e.offsetX <= 154 && e.offsetY >= 127 && e.offsetY <= 141) {
+            window.open('http://steampowered.com');
         }
     });
 }.call(this));

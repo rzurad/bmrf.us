@@ -62,7 +62,7 @@
 
     function toggleRadio() {
         isOn = !isOn;
-        fuzz.volume = isOn ? 0.4 : 0;
+        fuzz.volume = isOn ? 0.05 : 0;
         $radio.attr('src', isOn ? './assets/Rm9yZ2V0IGFib3V0IEZyZWVtYW4u.png' : './assets/radio.jpg');
     }
 

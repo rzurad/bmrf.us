@@ -185,6 +185,20 @@ h1 {
     line-height: 17px;
 }
 
+#byline .fa {
+    font-size: 26px;
+    float: right;
+    margin-left: 5px;
+}
+
+.fa-facebook-official {
+    color: #4764b7;
+}
+
+.fa-twitter-square {
+    color: #00acee;
+}
+
 #author {
     float: left;
     margin-right: 8px;

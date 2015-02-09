@@ -83,15 +83,9 @@
         }
     });
 
-    $('a').on('click', function (e) {
-        var commentClick = $(e.target).is('#comment-counter') || 
-                           $(e.target).parent('#comment-counter').length;
-
-        if (commentClick) {
-            window.location = '#comments';
-        } else {
-            showError();
-        }
+    $('a:not(.allow)').on('click', function (e) {
+        e.preventDefault();
+        showError();
     });
 
     $('#footer img').on('click', function (e) {

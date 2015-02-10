@@ -1,3 +1,65 @@
+/*
+Do you think we should appeal to the alien authorities?
+Have you been able to get the beverage machine to work yet?
+Wouldn't you like to get one of these blood samples under a microscope?
+Big day today, Freeman.
+It's about to go critical.
+It wasn't meant to do this in the first place.
+Bit of a gamble, but we need the extra resolution.
+They're waiting for you Gordon, in the Test Chamber.
+Gordon, are you not hearing me? Climb up and start the rotors, please!
+I'm seeing predictable phase arrays
+Standard insertion for a non-standard specimen
+Uh, it's probably not a problem... probably...
+What is he doing in there?
+Shutting down
+Attempting shutdown
+it's not... it's not shutting down, it's...
+I'm not so sure I want to go to the surface
+Open the Silo Door! They're coming for us, it's our only way out!
+Gordon Freeman, you've finally found us!
+If you're willing, my colleague is waiting for you at the main portal controls.
+Don't linger, Mr. Freeman!
+My colleagues are waiting at the tip of the Lambda Reactor. Waiting for you, of course.
+Do you still say there is nothing to chaos theory?
+No! I don't want to die!
+Now where did I leave that shutdown procedure chart?
+Oh no!
+With my brains and your brawn, we'd make an excellent team.
+Freeman? Who would have thought you'd still be alive!
+I certainly hope you know what you're doing
+Well... I seem to be seriously wounded.
+I hope you know what you're doing
+I don't suppose you'd reconsider?!
+The military cleanup is just a paranoid rumor, isn't it?
+This is as far as I go.
+Why do we all have to wear these rediculus ties?
+My God! What are you doing!
+I sincerely hope you know what you're doing.
+
+- Fat lot of good that Ph.D does me now
+- I've been waiting here for ages, hoping someone would come along!
+- If you let us all die, Freeman, you'll never get out of here.
+- Get us out of here before those military drones find out where we're hiding
+
+- The alien species can't possibily all be hostile, can they?
+- It's not our fault.
+- I never thought I'd see a Resonance Cascade, let alone create one.
+- I suspected this would happen, but the administrator just would not listen.
+- If you intend to go on, then, I beg of you, proceed with extreme caution.
+
+- It can't get any worse than this.
+- Their idea of containment is to kill everyone associated with the project.
+- It's Hell out there! It's completely under military control.
+- Why didn't they listen?
+- We tried to warn them
+
+- I can see you already know a great deal more than any one man is supposed to.
+- I never suspected such things could be...
+- The dimensional breach is definitely transmitting organic matter.
+- It appears the containment system has completely failed.
+- The science team has been tracking your progress with the Black Msea security system. Unfortunately, so is the military.
+*/
 (function () {
     "use strict";
 

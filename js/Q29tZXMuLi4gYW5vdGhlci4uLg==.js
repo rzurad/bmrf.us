@@ -1,13 +1,20 @@
 (function () {
     "use strict";
 
+    var t = this,
+        AudioContext = t['AudioContext'] || t['webkitAudioContext'];
+
+    if (AudioContext === void 0) {
+        return;
+    }
+
     var isOn = false,
         $radio = $('img[src="./assets/radio.jpg"]'),
 
         context = new AudioContext(),
         gain = context.createGain(),
         fuzz = new Audio('./assets/RGllLi4ueW91IGFsbCBkaWUuLi55b3UgYWxsIGRpZS4uLg==.m4a'),
-        dot = 40,
+        dot = 52,
         times = {
             '.': dot,
             '-': dot * 3,
@@ -15,7 +22,7 @@
             '/': dot * 7
         },
 
-        code = '...---... / ...---... / ...---... / -.. . / .- .. ..... -... -- / .- .. ..... -... -- / .- .. ..... -... -- / -... .-.. .- -.-. -.- / -- . ... .- / .-. . ... . .- .-. -.-. .... / ..-. .- -.-. .. .-.. .. - -.-- / -. -- / - .-. .- .--. .--. . -.. --..-- / -. . . -.. / .-. . ... -.-. ..- . .-.-.- / -- .. .-.. .. - .- .-. -.-- / .... --- ... - .. .-.. . / .-.-. / -.-',
+        code = '...---.../...---.../...---.../-.. ./.- .. ..... -... --/.- .. ..... -... --/.- .. ..... -... --/-... .-.. .- -.-. -.-/-- . ... .-/.-. . ... . .- .-. -.-. ..../..-. .- -.-. .. .-.. .. - -.--/-... .. --- -.. --- -- ./.-.. .- -... ... .-.-.-/- .-. .- .--. .--. . -.. --..--/-. . . -../.-. . ... -.-. ..- . .-.-.-/-- .. .-.. .. - .- .-. -.--/.... --- ... - .. .-.. ./.-.-./-.-//////////////////////////////',
 
         img = new Image();
 
@@ -46,13 +53,13 @@
 
         setTimeout(function () {
             if (isOn && c !== ' ' && c !== '/') {
-                oscillator.start();
+                oscillator.start(0);
                 isStarted = true;
             }
 
             setTimeout(function () {
                 if (isStarted && c !== ' ' && c !== '/') {
-                    oscillator.stop();
+                    oscillator.stop(0);
                 }
 
                 step(i + 1);
@@ -66,6 +73,16 @@
         $radio.attr('src', isOn ? './assets/Rm9yZ2V0IGFib3V0IEZyZWVtYW4u.png' : './assets/radio.jpg');
     }
 
+    $radio.on('click', function (e) {
+        if (e.offsetX >= 158 && e.offsetX <= 168 && e.offsetY >=74 && e.offsetY <= 83) {
+            toggleRadio();
+        }
+    });
+}.call(this));
+
+(function () {
+    "use strict";
+
     function hideError() {
         $('.alert').removeClass('alert-visible');
     }
@@ -76,12 +93,6 @@
         $('.alert').addClass('alert-visible');
         debounced();
     }
-
-    $radio.on('click', function (e) {
-        if (e.offsetX >= 158 && e.offsetX <= 168 && e.offsetY >=74 && e.offsetY <= 83) {
-            toggleRadio();
-        }
-    });
 
     $('a:not(.allow)').on('click', function (e) {
         e.preventDefault();

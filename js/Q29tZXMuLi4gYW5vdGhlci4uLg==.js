@@ -89,14 +89,20 @@
 
     var debounced = $.debounce(3000, false, hideError);
 
-    function showError() {
+    function showError(html) {
         $('.alert').addClass('alert-visible');
+        $('.alert').html(html);
         debounced();
     }
 
+    $('#desert-singles a').on('click', function (e) {
+        e.preventDefault();
+        showError('<strong>You really shouldn\'t click on strange ad links.</strong> Not even for rocket launchers.')
+    });
+
     $('a:not(.allow)').on('click', function (e) {
         e.preventDefault();
-        showError();
+        showError('Error while loading link: <strong>No internet connection.</strong>');
     });
 
     $('#footer img').on('click', function (e) {

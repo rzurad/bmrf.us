@@ -10,7 +10,7 @@ All of the social media links and buttons work (except the ones in the footer). 
 
 # Click on any of the links for Local Desert Singles
 # Click on the "Contact Us" button in the footer
-# Hit F12 and open the console.
+# Hit F12 and open the console
 # Clicking most of the links gives you a "no internet connection" error message
 
 # Click on the upper left button on the Ham Radio ad

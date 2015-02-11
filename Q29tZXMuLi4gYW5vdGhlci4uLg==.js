@@ -36,29 +36,8 @@ This is as far as I go.
 Why do we all have to wear these rediculus ties?
 My God! What are you doing!
 I sincerely hope you know what you're doing.
-
-- Fat lot of good that Ph.D does me now
-- I've been waiting here for ages, hoping someone would come along!
-- If you let us all die, Freeman, you'll never get out of here.
-- Get us out of here before those military drones find out where we're hiding
-
-- The alien species can't possibily all be hostile, can they?
-- It's not our fault.
-- I never thought I'd see a Resonance Cascade, let alone create one.
-- I suspected this would happen, but the administrator just would not listen.
-- If you intend to go on, then, I beg of you, proceed with extreme caution.
-
-- It can't get any worse than this.
-- Their idea of containment is to kill everyone associated with the project.
-- It's Hell out there! It's completely under military control.
-- Why didn't they listen?
-- We tried to warn them
-
-- I can see you already know a great deal more than any one man is supposed to.
-- I never suspected such things could be...
-- The dimensional breach is definitely transmitting organic matter.
-- It appears the containment system has completely failed.
-- The science team has been tracking your progress with the Black Msea security system. Unfortunately, so is the military.
+I never thought I'd see a Resonance Cascade, let alone create one.
+We tried to warn them
 */
 (function () {
     "use strict";
@@ -71,7 +50,7 @@ I sincerely hope you know what you're doing.
     }
 
     var isOn = false,
-        $radio = $('img[src="./02/radio.jpg"]'),
+        $radio = $('img[src="./02/SWYgeW91IGludGVuZCB0byBnbyBvbiwgdGhlbiwgSSBiZWcgb2YgeW91LCBwcm9jZWVkIHdpdGggZXh0cmVtZSBjYXV0aW9uLg=="]'),
 
         context = new AudioContext(),
         gain = context.createGain(),
@@ -84,11 +63,11 @@ I sincerely hope you know what you're doing.
             '/': dot * 7
         },
 
-        code = '...---.../...---.../...---.../-.. ./.- .. ..... -... --/.- .. ..... -... --/.- .. ..... -... --/-... .-.. .- -.-. -.-/-- . ... .-/.-. . ... . .- .-. -.-. ..../..-. .- -.-. .. .-.. .. - -.--/-... .. --- -.. --- -- ./.-.. .- -... ... .-.-.-/- .-. .- .--. .--. . -.. --..--/-. . . -../.-. . ... -.-. ..- . .-.-.-/-- .. .-.. .. - .- .-. -.--/.... --- ... - .. .-.. ./.-.-./-.-//////////////////////////////',
+        code = '...---.../...---.../...---.../-.. ./.- .. ..... -... --/.- .. ..... -... --/.- .. ..... -... --/-... .-.. .- -.-. -.-/-- . ... .-/.-. . ... . .- .-. -.-. ..../..-. .- -.-. .. .-.. .. - -.--/-... .. --- -.. --- -- ./.-.. .- -... ... .-.-.-/- .-. .- .--. .--. . -.. --..--/-. . . -../.-. . ... -.-. ..- . .-.-.-/. ...- .- -.-./--.. --- -. ./-. --- -/... .- ..-. . .-.-.-/-- .. .-.. .. - .- .-. -.--/.... --- ... - .. .-.. ./.-.-./-.-//////////////////////////////',
 
         img = new Image();
 
-    img.src = './02/Rm9yZ2V0IGFib3V0IEZyZWVtYW4u.png';
+    img.src = './02/SSBuZXZlciBzdXNwZWN0ZWQgc3VjaCB0aGluZ3MgY291bGQgYmUuLi4=';
 
     gain.connect(context.destination);
     gain.gain.value = 0.25;
@@ -132,7 +111,7 @@ I sincerely hope you know what you're doing.
     function toggleRadio() {
         isOn = !isOn;
         fuzz.volume = isOn ? 0.05 : 0;
-        $radio.attr('src', isOn ? './02/Rm9yZ2V0IGFib3V0IEZyZWVtYW4u.png' : './02/radio.jpg');
+        $radio.attr('src', isOn ? './02/SSBuZXZlciBzdXNwZWN0ZWQgc3VjaCB0aGluZ3MgY291bGQgYmUuLi4=' : './02/SWYgeW91IGludGVuZCB0byBnbyBvbiwgdGhlbiwgSSBiZWcgb2YgeW91LCBwcm9jZWVkIHdpdGggZXh0cmVtZSBjYXV0aW9uLg==');
     }
 
     $radio.on('click', function (e) {

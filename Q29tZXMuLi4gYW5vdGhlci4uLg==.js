@@ -136,11 +136,6 @@ We tried to warn them
         debounced();
     }
 
-    $('#desert-singles a').on('click', function (e) {
-        e.preventDefault();
-        showError('<strong>You really shouldn\'t click on strange ad links.</strong> Not even for rocket launchers.')
-    });
-
     $('a:not(.allow)').on('click', function (e) {
         e.preventDefault();
         showError('Error while loading link: <strong>No internet connection.</strong>');

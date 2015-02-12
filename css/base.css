@@ -43,7 +43,7 @@ header {
     position: relative;
     display: block;
     height: 54px;
-    background-color: #ebe0d2;
+    background-color: #e7e2d4;
     border-bottom: 1px solid #aaa;
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
@@ -236,7 +236,7 @@ h1 {
 }
 
 .panel {
-    background-color: #e9e1d2;
+    background-color: #e7e2d4;
     padding: 5px;
     padding-bottom: 10px;
     font-size: 12px;

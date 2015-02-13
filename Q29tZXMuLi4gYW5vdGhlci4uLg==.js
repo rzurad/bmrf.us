@@ -1,44 +1,20 @@
-/*
-Do you think we should appeal to the alien authorities?
-Have you been able to get the beverage machine to work yet?
-Wouldn't you like to get one of these blood samples under a microscope?
-Big day today, Freeman.
-It's about to go critical.
-It wasn't meant to do this in the first place.
-Bit of a gamble, but we need the extra resolution.
-They're waiting for you Gordon, in the Test Chamber.
-Gordon, are you not hearing me? Climb up and start the rotors, please!
-I'm seeing predictable phase arrays
-Standard insertion for a non-standard specimen
-Uh, it's probably not a problem... probably...
-What is he doing in there?
-Shutting down
-Attempting shutdown
-it's not... it's not shutting down, it's...
-I'm not so sure I want to go to the surface
-Open the Silo Door! They're coming for us, it's our only way out!
-Gordon Freeman, you've finally found us!
-If you're willing, my colleague is waiting for you at the main portal controls.
-Don't linger, Mr. Freeman!
-My colleagues are waiting at the tip of the Lambda Reactor. Waiting for you, of course.
-Do you still say there is nothing to chaos theory?
-No! I don't want to die!
-Now where did I leave that shutdown procedure chart?
-Oh no!
-With my brains and your brawn, we'd make an excellent team.
-Freeman? Who would have thought you'd still be alive!
-I certainly hope you know what you're doing
-Well... I seem to be seriously wounded.
-I hope you know what you're doing
-I don't suppose you'd reconsider?!
-The military cleanup is just a paranoid rumor, isn't it?
-This is as far as I go.
-Why do we all have to wear these rediculus ties?
-My God! What are you doing!
-I sincerely hope you know what you're doing.
-I never thought I'd see a Resonance Cascade, let alone create one.
-We tried to warn them
-*/
+$.hit = function (e, coords) {
+    var $target = $(e.target),
+        x = e.offsetX,
+        y = e.offsetY;
+
+    if (x === void 0) {
+        x = e.pageX - $target.offset().left;
+        y = e.pageY - $target.offset().top;
+    }
+
+    if (x >= coords.left && x <= coords.right && y >= coords.top && y <= coords.bottom) {
+        return true;
+    }
+
+    return false;
+};
+
 (function () {
     "use strict";
 
@@ -115,7 +91,7 @@ We tried to warn them
     }
 
     $radio.on('click', function (e) {
-        if (e.offsetX >= 158 && e.offsetX <= 168 && e.offsetY >=74 && e.offsetY <= 83) {
+        if ($.hit(e, { left: 158, right: 168, top: 74, bottom: 83 })) {
             toggleRadio();
         }
     });
@@ -142,7 +118,7 @@ We tried to warn them
     });
 
     $('#footer img').on('click', function (e) {
-        if (e.offsetX >= 58 && e.offsetX <= 124 && e.offsetY >= 126 && e.offsetY <= 141) {
+        if ($.hit(e, { top: 126, bottom: 141, right: 124, left: 58 })) {
             window.open('http://steampowered.com');
         }
     });

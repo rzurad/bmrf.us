@@ -99,23 +99,6 @@ $.hit = function (e, coords) {
 (function () {
     "use strict";
 
-    function hideError() {
-        $('.alert').removeClass('alert-visible');
-    }
-
-    var debounced = $.debounce(3000, false, hideError);
-
-    function showError(html) {
-        $('.alert').addClass('alert-visible');
-        $('.alert').html(html);
-        debounced();
-    }
-
-    $('a:not(.allow)').on('click', function (e) {
-        e.preventDefault();
-        showError('Error while loading link: <strong>No internet connection.</strong>');
-    });
-
     $('#footer img').on('click', function (e) {
         if ($.hit(e, { top: 126, bottom: 141, right: 124, left: 58 })) {
             window.open('http://steampowered.com');

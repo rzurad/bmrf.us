@@ -26,11 +26,11 @@ $.hit = function (e, coords) {
     }
 
     var isOn = false,
-        $radio = $('img[src="./02/SWYgeW91IGludGVuZCB0byBnbyBvbiwgdGhlbiwgSSBiZWcgb2YgeW91LCBwcm9jZWVkIHdpdGggZXh0cmVtZSBjYXV0aW9uLg=="]'),
+        $radio = $('img[src="./assets/SWYgeW91IGludGVuZCB0byBnbyBvbiwgdGhlbiwgSSBiZWcgb2YgeW91LCBwcm9jZWVkIHdpdGggZXh0cmVtZSBjYXV0aW9uLg=="]'),
 
         context = new AudioContext(),
         gain = context.createGain(),
-        fuzz = new Audio('./MP/RGllLi4ueW91IGFsbCBkaWUuLi55b3UgYWxsIGRpZS4uLg=='),
+        fuzz = new Audio('./assets/RGllLi4ueW91IGFsbCBkaWUuLi55b3UgYWxsIGRpZS4uLg=='),
         dot = 52,
         chars = [[' ', '.'], ['/', '-']],
         times = { '.': dot, '-': dot * 3, ' ': dot * 3, '/': dot * 7 },
@@ -39,7 +39,7 @@ $.hit = function (e, coords) {
 
         img = new Image();
 
-    img.src = './02/SSBuZXZlciBzdXNwZWN0ZWQgc3VjaCB0aGluZ3MgY291bGQgYmUuLi4=';
+    img.src = './assets/SSBuZXZlciBzdXNwZWN0ZWQgc3VjaCB0aGluZ3MgY291bGQgYmUuLi4=';
 
     gain.connect(context.destination);
     gain.gain.value = 0.25;
@@ -86,7 +86,7 @@ $.hit = function (e, coords) {
     function toggleRadio() {
         isOn = !isOn;
         fuzz.volume = isOn ? 0.05 : 0;
-        $radio.attr('src', isOn ? './02/SSBuZXZlciBzdXNwZWN0ZWQgc3VjaCB0aGluZ3MgY291bGQgYmUuLi4=' : './02/SWYgeW91IGludGVuZCB0byBnbyBvbiwgdGhlbiwgSSBiZWcgb2YgeW91LCBwcm9jZWVkIHdpdGggZXh0cmVtZSBjYXV0aW9uLg==');
+        $radio.attr('src', isOn ? './assets/SSBuZXZlciBzdXNwZWN0ZWQgc3VjaCB0aGluZ3MgY291bGQgYmUuLi4=' : './assets/SWYgeW91IGludGVuZCB0byBnbyBvbiwgdGhlbiwgSSBiZWcgb2YgeW91LCBwcm9jZWVkIHdpdGggZXh0cmVtZSBjYXV0aW9uLg==');
     }
 
     $radio.on('click', function (e) {

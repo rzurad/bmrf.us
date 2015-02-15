@@ -16,7 +16,7 @@
             case ' ': converted.push(randomFrom(['0', '2'])); break;
             case '/': converted.push(randomFrom(['1', '3'])); break;
             default:
-                console.error('what the fuck, bro?');
+                console.error('lolwat?');
         }
     }
 
